@@ -19,9 +19,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
                let window = UIWindow(windowScene: windowScene)
         let dashVc = DashBoardViewController(nibName: "DashBoardViewController", bundle: nil)
-//               let navController = UINavigationController(rootViewController: splashVC)
+        let navController = UINavigationController(rootViewController: dashVc)
 
-               window.rootViewController = dashVc
+               window.rootViewController = navController
                window.makeKeyAndVisible()
                self.window = window
     }

@@ -14,6 +14,11 @@ class DashBoardTableViewCell: UITableViewCell {
 
     static let identifier = "DashBoardTableViewCell"
     
+    static func nib() -> UINib{
+        return UINib(nibName: "DashBoardTableViewCell", bundle: nil)
+    }
+
+    
     
     @IBOutlet weak var itemName: UILabel!
     @IBOutlet weak var itemDescription: UILabel!
@@ -25,7 +30,9 @@ class DashBoardTableViewCell: UITableViewCell {
     
     
     private var items: [Model] = []
+//    var items = [Model]()
         private var isExpanded = false
+    
         var onToggle: (() -> Void)?
 
     
@@ -44,7 +51,7 @@ class DashBoardTableViewCell: UITableViewCell {
         
         
         
-        dashboardCollectionView.register(UINib(nibName: "dashBoardCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: dashBoardCollectionViewCell.identifier)
+        dashboardCollectionView.register(dashBoardCollectionViewCell.nib(), forCellWithReuseIdentifier: dashBoardCollectionViewCell.identifier)
         dashboardCollectionView.delegate = self
         dashboardCollectionView.dataSource = self
         
@@ -59,17 +66,14 @@ class DashBoardTableViewCell: UITableViewCell {
     }
     
     
-    @IBAction func showButtonTapped(_ sender: UIButton) {
+    @IBAction func showButtonTapped(_ sender: Any) {
         isExpanded.toggle()
         
-//        UIView.animate(withDuration: 0.3) {
-//                    self.dashboardCollectionView.isHidden = !self.isExpanded
-//                    self.showButton.setTitle(self.isExpanded ? "Hide" : "Show", for: .normal)
-//                    self.contentView.layoutIfNeeded()
-//                }
         onToggle?()
         
     }
+    
+    
     
     // configure function
     
@@ -86,7 +90,7 @@ class DashBoardTableViewCell: UITableViewCell {
 //        isExpanded = false
 //        dashboardCollectionView.isHidden = true
 //       showButton.setTitle("Show", for: .normal)
-        
+//        
     }
     
 }

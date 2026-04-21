@@ -11,6 +11,10 @@ class dashBoardCollectionViewCell: UICollectionViewCell {
     
     
     static let identifier = "dashBoardCollectionViewCell"
+    
+    static func nib() -> UINib{
+        return UINib(nibName: "dashBoardCollectionViewCell", bundle: nil)
+    }
        
     
     @IBOutlet weak var title: UILabel!

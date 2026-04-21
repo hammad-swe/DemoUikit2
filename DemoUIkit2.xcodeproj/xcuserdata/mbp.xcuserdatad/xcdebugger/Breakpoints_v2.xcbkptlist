@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "05240F88-79AC-43F2-8947-3295F836C3BC"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0525054E-B5E3-4D95-BF2C-851F83DA8396"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DemoUIkit2/DashBoard/DashBoardViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "DashBoardViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "0525054E-B5E3-4D95-BF2C-851F83DA8396 - 2b33c3355eeea967"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DemoUIkit2.DashBoardViewController.tableView.getter : Swift.Optional&lt;__C.UITableView&gt;"
+                  moduleName = "DemoUIkit2.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mbp/Documents/Office%20Work/DemoUIkit2/DemoUIkit2/DashBoard/DashBoardViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14">
+               </Location>
+               <Location
+                  uuid = "0525054E-B5E3-4D95-BF2C-851F83DA8396 - 1d4d82b426acf553"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DemoUIkit2.DashBoardViewController.tableView.setter : Swift.Optional&lt;__C.UITableView&gt;"
+                  moduleName = "DemoUIkit2.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mbp/Documents/Office%20Work/DemoUIkit2/DemoUIkit2/DashBoard/DashBoardViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14">
+               </Location>
+               <Location
+                  uuid = "0525054E-B5E3-4D95-BF2C-851F83DA8396 - 6953d8fe769a0c62"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DemoUIkit2.DashBoardViewController.tableView.modify : Swift.Optional&lt;__C.UITableView&gt;"
+                  moduleName = "DemoUIkit2.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mbp/Documents/Office%20Work/DemoUIkit2/DemoUIkit2/DashBoard/DashBoardViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14">
+               </Location>
+               <Location
+                  uuid = "0525054E-B5E3-4D95-BF2C-851F83DA8396 - 365578a00c6ed5a3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DemoUIkit2.DashBoardViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; DemoUIkit2.DashBoardViewController"
+                  moduleName = "DemoUIkit2.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mbp/Documents/Office%20Work/DemoUIkit2/DemoUIkit2/DashBoard/DashBoardViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14">
+               </Location>
+               <Location
+                  uuid = "0525054E-B5E3-4D95-BF2C-851F83DA8396 - f276f9d5457757fd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DemoUIkit2.DashBoardViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;DemoUIkit2.DashBoardViewController&gt;"
+                  moduleName = "DemoUIkit2.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mbp/Documents/Office%20Work/DemoUIkit2/DemoUIkit2/DashBoard/DashBoardViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

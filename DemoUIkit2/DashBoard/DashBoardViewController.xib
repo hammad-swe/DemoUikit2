@@ -10,7 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DashBoardViewController" customModule="DemoUIkit2" customModuleProvider="target">
             <connections>
-                <outlet property="tableView" destination="lRp-Du-Mcc" id="kay-5G-wqM"/>
+                <outlet property="tableView" destination="lRp-Du-Mcc" id="R6W-ei-EGV"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
