@@ -10,8 +10,9 @@ import UIKit
 class DashBoardViewController: UIViewController {
    
     
-    
     @IBOutlet weak var tableView: UITableView!
+    
+   
     
     
     
@@ -21,20 +22,16 @@ class DashBoardViewController: UIViewController {
            Model(name: "Gol Gappy",   description: "Crispy shells with tangy filling",            image: "golgappy",   price: "Rs. 200.00"),
            Model(name: "Steak",   description: "Tender, juicy grilled beef cut.",            image: "steak",   price: "Rs. 1000.00")
        ]
-//    var items = [Model]()
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Dashboard"
         
-//        items.append(Model(name: "Chapli Kabab",description: "Juicy grilled meat with rich spices.", image: "kabab", price: "Rs. 100.00"))
-//        items.append(Model(name: "Indian Dish",description: "Spicy, flavorful traditional meal.",  image: "indian_dish",     price: "Rs. 600.00"))
-//        items.append(Model(name: "Gol Gappy",description: "Crispy shells with tangy filling",image: "golgappy",   price: "Rs. 200.00"))
-//        items.append(Model(name: "Steak",   description: "Tender, juicy grilled beef cut.",image: "steak",   price: "Rs. 1000.00"))
-        
-        tableView.register(DashBoardTableViewCell.nib(), forCellReuseIdentifier: DashBoardTableViewCell.identifier)
+        tableView.register(DashBoardTableViewCell.nib(), forCellReuseIdentifier: DashBoardTableViewCell.identifier,)
         tableView.delegate = self
         tableView.dataSource = self
+        
         
     }
 
@@ -47,12 +44,14 @@ extension DashBoardViewController: UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell =  tableView.dequeueReusableCell(withIdentifier: DashBoardTableViewCell.identifier, for: indexPath) as! DashBoardTableViewCell
+        let cell =   tableView.dequeueReusableCell(withIdentifier: DashBoardTableViewCell.identifier, for: indexPath) as! DashBoardTableViewCell
         cell.configure(with: items[indexPath.row], relatedItems: items)
 
                 cell.onToggle = { [weak tableView] in
-                    tableView?.beginUpdates()
-                    tableView?.endUpdates()
+                    UIView.animate(withDuration: 0.3) {
+                            tableView?.beginUpdates()
+                            tableView?.endUpdates()
+                        }
                 }
         return cell
     }

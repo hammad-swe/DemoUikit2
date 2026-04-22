@@ -40,20 +40,27 @@ class DashBoardTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        // image style
-//        itemImage.layer.cornerRadius = 10
-//        itemImage.clipsToBounds = true
+//         image style
+        itemImage.layer.cornerRadius = 20
+       
+        itemImage.clipsToBounds = true
         
         // collectionView layout
-//        let layout = UICollectionViewFlowLayout()
-//        layout.itemSize           = CGSize(width: 110, height: 130)
-//        dashboardCollectionView.collectionViewLayout = layout
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .horizontal
+        layout.itemSize = CGSize(width: 110, height: 130)
+        layout.minimumLineSpacing  = 10
+        layout.sectionInset = UIEdgeInsets(top: 0, left: 12, bottom: 0, right: 12)
+        dashboardCollectionView.collectionViewLayout = layout
         
         
         
         dashboardCollectionView.register(dashBoardCollectionViewCell.nib(), forCellWithReuseIdentifier: dashBoardCollectionViewCell.identifier)
         dashboardCollectionView.delegate = self
         dashboardCollectionView.dataSource = self
+        
+        dashboardCollectionView.showsHorizontalScrollIndicator = false
+        dashboardCollectionView.backgroundColor = .clear
         
         // hide by defaults
         dashboardCollectionView.isHidden = true
@@ -69,6 +76,10 @@ class DashBoardTableViewCell: UITableViewCell {
     @IBAction func showButtonTapped(_ sender: Any) {
         isExpanded.toggle()
         
+        self.dashboardCollectionView.isHidden = !self.isExpanded
+        self.showButton.setTitle(self.isExpanded ? "Hide" : "Show", for: .normal)
+        
+        self.contentView.layoutIfNeeded()
         onToggle?()
         
     }
@@ -87,27 +98,30 @@ class DashBoardTableViewCell: UITableViewCell {
         items = relatedItems
         dashboardCollectionView.reloadData()
         
-//        isExpanded = false
-//        dashboardCollectionView.isHidden = true
-//       showButton.setTitle("Show", for: .normal)
+        isExpanded = false
+        dashboardCollectionView.isHidden = true
+       showButton.setTitle("Show", for: .normal)
 //        
     }
     
 }
 
 
-extension DashBoardTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
+extension DashBoardTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return items.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = dashboardCollectionView.dequeueReusableCell(withReuseIdentifier: dashBoardCollectionViewCell.identifier, for: indexPath) as! dashBoardCollectionViewCell
-        cell.configure(with: items[indexPath.item])
+        cell.config(with: items[indexPath.item])
         return cell
     }
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//           return CGSize(width: 150, height: 150)
-//       }
     
+}
+
+extension DashBoardTableViewCell: UICollectionViewDelegateFlowLayout{
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+           return CGSize(width: 110, height: 130)
+       }
 }

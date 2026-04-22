@@ -26,15 +26,15 @@ class dashBoardCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-//        itemImage.layer.cornerRadius = 8
-//        itemImage.clipsToBounds = true
-//        contentView.layer.cornerRadius = 8
-//        contentView.layer.borderWidth = 0.5
-//        contentView.layer.borderColor = UIColor.separator.cgColor
+        itemImage.layer.cornerRadius = 8
+        itemImage.clipsToBounds = true
+        contentView.layer.cornerRadius = 8
+        contentView.layer.borderWidth = 0.5
+        contentView.layer.borderColor = UIColor.separator.cgColor
        
     }
     
-    public func configure(with model: Model){
+    public func config(with model: Model){
         self.title.text = model.name
         self.price.text = model.price
         self.itemImage.image = UIImage(named: model.image)

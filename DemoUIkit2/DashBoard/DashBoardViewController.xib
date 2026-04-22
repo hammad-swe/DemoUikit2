@@ -10,7 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DashBoardViewController" customModule="DemoUIkit2" customModuleProvider="target">
             <connections>
-                <outlet property="tableView" destination="lRp-Du-Mcc" id="R6W-ei-EGV"/>
+                <outlet property="tableView" destination="0Ow-m3-zvA" id="Yvm-Qd-OmW"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -19,7 +19,7 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="lRp-Du-Mcc">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="0Ow-m3-zvA">
                     <rect key="frame" x="0.0" y="118" width="393" height="666"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
@@ -27,10 +27,10 @@
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="lRp-Du-Mcc" secondAttribute="trailing" id="Etm-Qf-5Ea"/>
-                <constraint firstItem="lRp-Du-Mcc" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Hbh-sB-8KK"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="lRp-Du-Mcc" secondAttribute="bottom" id="OdO-F8-2Ke"/>
-                <constraint firstItem="lRp-Du-Mcc" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="xH2-hb-fPb"/>
+                <constraint firstItem="0Ow-m3-zvA" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="0nS-gy-ptc"/>
+                <constraint firstItem="0Ow-m3-zvA" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="1BC-W6-LFb"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="0Ow-m3-zvA" secondAttribute="trailing" id="ILA-xI-CkB"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="0Ow-m3-zvA" secondAttribute="bottom" id="gRk-WL-hxh"/>
             </constraints>
             <point key="canvasLocation" x="-31" y="106"/>
         </view>
