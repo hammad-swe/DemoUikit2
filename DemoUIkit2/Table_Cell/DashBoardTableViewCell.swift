@@ -43,15 +43,18 @@ class DashBoardTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
+        contentView.layer.cornerRadius = 10
+            contentView.layer.masksToBounds = true
 //         image style
-        itemImage.layer.cornerRadius = 20
+        itemImage.layer.cornerRadius = 10
        
         itemImage.clipsToBounds = true
+        
         
         // collectionView layout
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
-        layout.itemSize = CGSize(width: 110, height: 130)
+        layout.itemSize = CGSize(width: 110, height: 200)
         layout.minimumLineSpacing  = 10
         layout.sectionInset = UIEdgeInsets(top: 0, left: 12, bottom: 0, right: 12)
         dashboardCollectionView.collectionViewLayout = layout

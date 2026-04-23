@@ -20,6 +20,16 @@ class DashBoardViewController: UIViewController {
            Model(name: "Chapli Kabab",  description: "Juicy grilled meat with rich spices.", image: "kabab", price: "Rs. 100.00"),
            Model(name: "Indian Dish",   description: "Spicy, flavorful traditional meal.",  image: "indian_dish",     price: "Rs. 600.00"),
            Model(name: "Gol Gappy",   description: "Crispy shells with tangy filling",            image: "golgappy",   price: "Rs. 200.00"),
+           Model(name: "Steak",   description: "Tender, juicy grilled beef cut.",            image: "steak",   price: "Rs. 1000.00"),
+           
+           Model(name: "Chapli Kabab",  description: "Juicy grilled meat with rich spices.", image: "kabab", price: "Rs. 100.00"),
+           Model(name: "Indian Dish",   description: "Spicy, flavorful traditional meal.",  image: "indian_dish",     price: "Rs. 600.00"),
+           Model(name: "Gol Gappy",   description: "Crispy shells with tangy filling",            image: "golgappy",   price: "Rs. 200.00"),
+           Model(name: "Steak",   description: "Tender, juicy grilled beef cut.",            image: "steak",   price: "Rs. 1000.00"),
+           
+           Model(name: "Chapli Kabab",  description: "Juicy grilled meat with rich spices.", image: "kabab", price: "Rs. 100.00"),
+           Model(name: "Indian Dish",   description: "Spicy, flavorful traditional meal.",  image: "indian_dish",     price: "Rs. 600.00"),
+           Model(name: "Gol Gappy",   description: "Crispy shells with tangy filling",            image: "golgappy",   price: "Rs. 200.00"),
            Model(name: "Steak",   description: "Tender, juicy grilled beef cut.",            image: "steak",   price: "Rs. 1000.00")
        ]
 
@@ -27,10 +37,20 @@ class DashBoardViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Dashboard"
+        let appearance = UINavigationBarAppearance()
+            appearance.titleTextAttributes = [
+                .foregroundColor: UIColor.orange    // Change color here
+            ]
+            
+            // Apply to navigation bar
+            navigationController?.navigationBar.standardAppearance = appearance
+            navigationController?.navigationBar.scrollEdgeAppearance = appearance
+        
         
         tableView.register(DashBoardTableViewCell.nib(), forCellReuseIdentifier: DashBoardTableViewCell.identifier,)
         tableView.delegate = self
         tableView.dataSource = self
+        
         
         
     }
@@ -54,6 +74,9 @@ extension DashBoardViewController: UITableViewDelegate, UITableViewDataSource{
                         }
                 }
         return cell
+    }
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 10  // spacing
     }
     
     
