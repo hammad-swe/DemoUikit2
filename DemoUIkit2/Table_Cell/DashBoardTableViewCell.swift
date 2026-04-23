@@ -29,6 +29,9 @@ class DashBoardTableViewCell: UITableViewCell {
     @IBOutlet weak var dashboardCollectionView: UICollectionView!
     
     
+    @IBOutlet var dashboardCollectionViewHieghtConstraint: NSLayoutConstraint!
+    
+    
     private var items: [Model] = []
 //    var items = [Model]()
         private var isExpanded = false
@@ -64,6 +67,7 @@ class DashBoardTableViewCell: UITableViewCell {
         
         // hide by defaults
         dashboardCollectionView.isHidden = true
+        dashboardCollectionViewHieghtConstraint.constant = 0
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -77,6 +81,7 @@ class DashBoardTableViewCell: UITableViewCell {
         isExpanded.toggle()
         
         self.dashboardCollectionView.isHidden = !self.isExpanded
+        self.dashboardCollectionViewHieghtConstraint.constant = self.isExpanded ? 150 : 0
         self.showButton.setTitle(self.isExpanded ? "Hide" : "Show", for: .normal)
         
         self.contentView.layoutIfNeeded()
@@ -100,6 +105,7 @@ class DashBoardTableViewCell: UITableViewCell {
         
         isExpanded = false
         dashboardCollectionView.isHidden = true
+        dashboardCollectionViewHieghtConstraint.constant = 0
        showButton.setTitle("Show", for: .normal)
 //        
     }
